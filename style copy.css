@@ -1,0 +1,277 @@
+/*
+font-family: 'Noto Sans JP', sans-serif;
+font-family: 'Silkscreen', sans-serif;
+*/
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    color: #333;
+    text-decoration: none;
+    user-select: none;
+}
+
+a {
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+    vertical-align: bottom;
+    object-fit: cover;
+}
+
+
+
+
+/* メインコンテナ */
+.header-container {
+    padding: 150px 30px 30px 30px;
+    background-color: rgb(196, 196, 196);
+    text-align: center;
+
+
+}
+
+.header .logo {
+    margin: 0;
+}
+
+
+
+
+/* ブログセクション */
+.blog {
+    padding: 30px 0;
+}
+
+.blog .heading {
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 1;
+    letter-spacing: 0.08em;
+    color: #24a8bf;
+    text-align: center;
+    margin-bottom: 30px;
+    background-color: antiquewhite;
+    font-family: 'Silkscreen', sans-serif;
+}
+
+.blog .subtitle,
+.date {
+    display: block;
+    font-size: 12px;
+    line-height: 1;
+    letter-spacing: 0.03em;
+    color: #6d6d6d;
+    margin-top: 8px;
+}
+
+.blog .list {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+}
+
+.item {
+    width: calc((100% - 50px) / 2);
+    max-width: 350px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 30px;
+    background-color: rgb(210, 255, 241);
+    z-index: 1;
+
+}
+
+
+.item:hover {
+    opacity: 0.8;
+}
+
+.item .title {
+    font-weight: bold;
+    /*太字*/
+}
+
+
+/* main */
+.main-container {
+    background-color: rgb(255, 244, 150);
+    display: flex;
+    flex-wrap: wrap;
+
+    /* 中央寄せを追加 */
+}
+
+.under {
+    border-bottom: dashed 3px #52bdff;
+}
+
+
+.main-img {
+    background-color: aliceblue;
+    flex-grow: 1;
+    width: 150%;
+    /* 必要に応じてこの幅を調整してください */
+    text-align: center;
+    margin: auto;
+
+}
+
+.main-container img {
+    border-radius: 50%;
+}
+
+.main-body {
+    flex-grow: 1;
+    width: 150%;
+    /* 必要に応じてこの幅を調整してください */
+    padding-right: 100px;
+    background-color: #fdcece;
+    margin: auto;
+    padding: 10px;
+    background-color: #f6faee;
+    /*背景色*/
+
+}
+
+.main-outline {
+    background-color: rgb(220, 245, 242);
+}
+
+.main-body li {
+    list-style-type: none
+}
+
+/* 中サイズの画面用メディアクエリ */
+@media (max-width: 991px) {
+    .header-container {
+        padding: 70px 30px 30px 30px;
+    }
+
+
+    .navbar-title {
+        font-size: 20px;
+    }
+
+    .item {
+        width: calc((100% - 70px) / 2);
+    }
+
+    .main-body {
+        font-size: 150%;
+        width: 100%;
+        padding: 40px;
+    }
+
+    .main-img {
+        width: 300px;
+    }
+
+}
+
+/* 大きな画面用メディアクエリ */
+@media (min-width: 992px) {
+    .item {
+        width: calc((100% - 90px) / 3);
+    }
+
+    .item:nth-child(2n) {
+        margin-right: 10px;
+    }
+
+    .main-body {
+        font-size: 150%;
+        width: calc(130% / 2);
+        padding: 0px 100px 0px 100px;
+
+
+    }
+
+    .main-img {
+        width: calc(70% / 2);
+    }
+}
+
+
+/* .main-container、.main-body、.main-img に共通するスタイル */
+.item .title {
+    font-size: 120%;
+}
+
+.img-container {
+    margin-bottom: 12px;
+    width: 100%;
+    height: 150px;
+    background-color: aliceblue;
+}
+
+
+
+.title,
+.date {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.pop-body {
+    padding: 16px;
+}
+
+.center {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+
+
+/* ボタン */
+.btn {
+    display: block;
+    position: relative;
+    width: 220px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #24a8bf;
+    line-height: 1;
+    text-align: center;
+    margin: 0 auto;
+    padding: 18px 0;
+    transition: opacity 0.3s;
+    border: 1px solid #24a8bf;
+    border-radius: 3px;
+}
+
+.btn::after {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 1em;
+    width: 5px;
+    height: 9px;
+    transform: translateY(-50%);
+    background-image: url("./image/icon_arrow-right.png");
+    background-repeat: no-repeat;
+    background-size: 5px 9px;
+}
+
+/* フッター */
+.footer-container {
+    width: 100%;
+    background-color: #0ea3be;
+    padding: 30% 0px 15px 0px;
+    text-align: center;
+}
+
+.white-color {
+    color: rgb(255, 255, 255);
+}
